@@ -1,0 +1,35 @@
+<!-- Add New List Button -->
+<div>
+    <button *ngIf="selectedList" (click)="showAddCardsModal()">+ Add New Card</button>
+    </div>
+    <!-- Modal for Adding a List -->
+    <div *ngIf="showAddCardModal" class="modal-overlay" (click)="hideAddCardsModal()"></div>
+    <div *ngIf="showAddCardModal" class="modal">
+      <h2>Add New Card</h2>
+      <form (ngSubmit)="addCard()">
+        <label for="name">Card title:</label>
+        <input
+          type="text"
+          id="title"
+          [(ngModel)]="newCardName"
+          name="title"
+          required
+        />
+        <label for="name">Card Content:</label>
+        <input
+          type="text"
+          id="content"
+          [(ngModel)]="newCardContent"
+          name="content"
+          required
+        />
+        <p *ngIf="selectedList">
+          Adding to List: <strong>{{ selectedList.name }}</strong>
+        </p>
+        <div class="modal-buttons">
+          <button type="submit">Add</button>
+          <button type="button" (click)="hideAddCardsModal()">Cancel</button>
+        </div>
+      </form>
+    </div>
+    

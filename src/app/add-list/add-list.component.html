@@ -1,0 +1,26 @@
+<!-- Add New List Button -->
+<div>
+<button *ngIf="selectedBoard" (click)="showAddListsModal()">+ Add New List</button>
+</div>
+<!-- Modal for Adding a List -->
+<div *ngIf="showAddListModal" class="modal-overlay" (click)="hideAddListsModal()"></div>
+<div *ngIf="showAddListModal" class="modal">
+  <h2>Add New List</h2>
+  <form (ngSubmit)="addList()">
+    <label for="name">List Name:</label>
+    <input
+      type="text"
+      id="name"
+      [(ngModel)]="newListName"
+      name="name"
+      required
+    />
+    <p *ngIf="selectedBoard">
+      Adding to Board: <strong>{{ selectedBoard.name }}</strong>
+    </p>
+    <div class="modal-buttons">
+      <button type="submit">Add</button>
+      <button type="button" (click)="hideAddListsModal()">Cancel</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Board Container */
+  .board-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .board-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .board-button {
+    background-color: #0079bf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .board-button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Lists and Cards */
+  .lists-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .list {
+    background-color: #ebecf0;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .list h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  
+  .card h3 p {
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .card p {
+    margin: 0;
+    color: #555;
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+  }
+  
+  .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    width: 400px;
+    max-width: 90%;
+  }
+  
+  .modal h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .modal label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .modal input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-buttons button {
+    background-color: #0079bf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .modal-buttons button:hover {
+    background-color: #005fa3;
+  }
+  
+  /* Add New Buttons */
+  button {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+    color: white;
+  }
+  
+  /* Utility Classes */
+  .back-button {
+    margin-bottom: 20px;
+    background-color: #dfe1e6;
+    color: #333;
+  }
+  
+  .back-button:hover {
+    background-color: #c1c7d0;
+  }
+  
+  

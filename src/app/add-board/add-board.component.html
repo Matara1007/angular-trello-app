@@ -1,0 +1,28 @@
+  <!-- Modal for Adding a Board -->
+  <div>
+    <!-- Add New Board Button -->
+    <button (click)="showAddBoard()">+ Add New Board</button>
+  
+  <div
+    *ngIf="showAddBoardModal"
+    class="modal-overlay"
+    (click)="hideAddBoard()"
+  ></div>
+  <div *ngIf="showAddBoardModal" class="modal">
+    <h2>Add New Board</h2>
+    <form (ngSubmit)="addBoard()">
+      <label for="name">Board Name:</label>
+      <input
+        type="text"
+        id="name"
+        [(ngModel)]="newBoardName"
+        name="name"
+        required
+      />
+      <div class="modal-buttons">
+        <button type="submit">Add</button>
+        <button type="button" (click)="hideAddBoard()">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
